@@ -1,0 +1,162 @@
+<?php endwhile; ?>
+<?php else: ?>
+<tr>
+<td colspan="3" rowspan="1" headers="">No Data Found</td>
+</tr>
+<?php endif; ?>
+<?php mysqli_free_result($result); ?>
+</tbody>
+</table>
+</div>
+<div class="col-md-5">
+<span id="first_name"></span><br>
+<span id="last_name"></span><br>
+<span id="myemail"></span><br>
+<span id="mymobile"></span><br>
+<span id="mygender"></span><br>
+<span id="mydob"></span><br>
+<span id="myaddress"></span><br>
+<span id="mycity"></span><br>
+<span id="mypin"></span><br>
+<span id="mystate"></span><br>
+<span id="myqualification"></span><br>
+<span id="mysalary"></span><br>
+
+</div>
+</div>        
+</div>
+<script type="text/javascript">
+$(document).ready(function($){
+$('body').on('click', '.view', function () {
+var id = $(this).data('id');
+// ajax
+$.ajax({
+type:"POST",
+url: "ajax-fetch-record.php",
+data: { id: id },
+dataType: 'json',
+success: function(res){
+$('#first_name').html(res.first_name);
+$('#last_name').html(res.last_name);
+$('#myemail').html(res.myemail);
+$('#mymobile').html(res.mymobile);
+$('#mygender').html(res.mygender);
+$('#mydob').html(res.mydob);
+$('#myaddress').html(res.myaddress);
+$('#mycity').html(res.mycity);
+$('#mypin').html(res.mypin);
+$('#mystate').html(res.mystate);
+$('#myqualification').html(res.myqualification);
+$('#mysalary').html(res.mysalary);
+
+}
+});
+});
+});
+</script>
+
+
+
+HOME.CSS
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-weight: bolder;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: monospace;
+    color: black;
+    font-weight: bolder;
+    /* font-size: 20px; */
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: rgb(2, 2, 2);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+      border: none;
+      border-radius: 5px;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  
+  li.dropdown {
+    /* display: inline-block; */
+    float: right;
+    margin-right: 80px;
+  }
+  
+  .dropdown-content {
+
+        border: none;
+        border-radius: 5px;
+        display: none;
+        position: absolute;
+        background: #FDC830;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin: 5px;
+        padding: 5px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .homecontent{
+      margin: 30px auto;
+      padding: 12px;
+      width: 70%;
+      max-height: fit-content;
+      border: 5px solid black;
+  }
+
+  .myss{
+      border: 3px solid;
+      padding: 40px;
+      margin: 50px auto;
+  }
+
+  .topnav{
+    background: #005AA7;  
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);
+    background: linear-gradient(to right, #FFFDE4, #005AA7);
+    
+  }

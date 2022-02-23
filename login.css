@@ -1,0 +1,80 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+	background: url(login_img.jpg) no-repeat;
+	background-size: cover;
+    box-sizing: border-box;
+    font-weight: bolder;
+
+}
+
+.login-box {
+	width: 500px;
+	position: absolute;
+    padding: 50px;
+    color: black;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #191970;
+	background: rgba(255, 255, 255, .7);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(7px);
+}
+
+.login-box h1 {
+	float: left;
+	font-size: 40px;
+	border-bottom: 4px solid #191970;
+	margin-bottom: 50px;
+	padding: 13px;
+}
+
+.textbox {
+    color: black;
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+	border-bottom: 1px solid #191970;
+}
+
+.fa {
+	width: px;
+	float: left;
+	text-align: center;
+}
+
+.textbox input {
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 18px;
+	float: left;
+	margin: 0 10px;
+}
+
+.button {
+	width: 100%;
+	padding: 8px;
+	color: #ffffff;
+	background: #373B44;  
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+    background: linear-gradient(to right, #4286f4, #373B44); 
+    border: none;
+	font-size: 18px;
+	cursor: pointer;
+	margin: 12px 0;
+    
+}
+.button:hover,
+.button:focus {
+    background: #f12711;  
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  
+    background: linear-gradient(to right, #f5af19, #f12711); 
+
+
+}
+
